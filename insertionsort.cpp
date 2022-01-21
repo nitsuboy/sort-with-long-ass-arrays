@@ -21,7 +21,7 @@ void insertionSort(int array[], int size)
 
 int main()
 {
-  int e = 6;
+  int e = 6;        //expoente do 10
   int *A = LAAA(e); //array aleatorio
   //int *A = LAAC(e); //array crecsente
   //int *A = LAAD(e); //array decrecsente
@@ -34,7 +34,7 @@ int main()
 
   auto diff = end - start;
 
-  cout << fixed ;
+  cout << fixed;
   cout << chrono::duration<long double, milli>(diff).count() << " ms para um array de 10^" << e << "\n";
   cout << chrono::duration<long double>(diff).count() << " s para um array de 10^" << e;
 
