@@ -53,7 +53,8 @@ int main()
 
     auto diff = end - start;
 
-    cout << chrono::duration<double, milli>(diff).count() << " ms";
+    cout << chrono::duration<long double, milli>(diff).count() << " ms para um array de 10^" << e << "\n";
+    cout << chrono::duration<long double>(diff).count() << " s para um array de 10^" << e;
 
     return 0;
 }

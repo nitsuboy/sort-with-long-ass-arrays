@@ -36,12 +36,7 @@ int *LAAA(int n)
 {
     int *A = LAAC(n);
 
-    std :: random_shuffle(A,A + p(10, n));
+    std ::random_shuffle(A, A + p(10, n));
 
     return A;
 }
-
-int tmn_arr(int *A){
-    return sizeof(A) / sizeof(A[0]);
-}
-
