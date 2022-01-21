@@ -1,4 +1,7 @@
 #include <bits/stdc++.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <algorithm>
 #include <chrono>
 #include "lib.h"
 using namespace std;
