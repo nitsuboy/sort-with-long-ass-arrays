@@ -26,9 +26,9 @@ void bubbleSort(int *arr, int n)
 int main()
 {
     int e = 6;        //expoente do 10
-    int *A = LAAA(e); //array aleatorio
+    //int *A = LAAA(e); //array aleatorio
     //int *A = LAAC(e); //array crecsente
-    //int *A = LAAD(e); //array decrecsente
+    int *A = LAAD(e); //array decrecsente
 
     auto start = chrono ::steady_clock ::now();
 
