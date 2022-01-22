@@ -8,7 +8,6 @@ using namespace std;
 
 void heapify(int arr[], int n, int i)
 {
-    // Find largest among root, left child and right child
     int largest = i;
     int left = 2 * i + 1;
     int right = 2 * i + 2;
@@ -19,7 +18,6 @@ void heapify(int arr[], int n, int i)
     if (right < n && arr[right] > arr[largest])
         largest = right;
 
-    // Swap and continue heapifying if root is not largest
     if (largest != i)
     {
         swap(arr[i], arr[largest]);
@@ -27,29 +25,17 @@ void heapify(int arr[], int n, int i)
     }
 }
 
-// main function to do heap sort
 void heapSort(int arr[], int n)
 {
-    // Build max heap
     for (int i = n / 2 - 1; i >= 0; i--)
         heapify(arr, n, i);
 
-    // Heap sort
     for (int i = n - 1; i >= 0; i--)
     {
         swap(arr[0], arr[i]);
 
-        // Heapify root element to get highest element at root again
         heapify(arr, i, 0);
     }
-}
-
-// Print an array
-void printArray(int arr[], int n)
-{
-    for (int i = 0; i < n; ++i)
-        cout << arr[i] << " ";
-    cout << "\n";
 }
 
 int main()
@@ -68,6 +54,7 @@ int main()
     auto diff = end - start;
 
     cout << fixed;
+    cout << "heap sort\n";
     cout << chrono::duration<long double, milli>(diff).count() << " ms para um array de 10^" << e << "\n";
     cout << chrono::duration<long double>(diff).count() << " s para um array de 10^" << e;
 
